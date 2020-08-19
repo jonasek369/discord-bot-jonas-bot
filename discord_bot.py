@@ -1,6 +1,5 @@
 import asyncio
 import os
-import youtube_dl
 from discord.ext import commands, tasks
 from discord.utils import get
 from datetime import datetime
