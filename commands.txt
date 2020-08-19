@@ -1,0 +1,30 @@
+```Admin commands:
+  kick
+  eco+
+  eco-
+  resetacc
+  mute
+  unmute
+
+@everyone commands
+  balance
+  work
+  calculator
+  clear
+  deposit
+  developer
+  game
+  gay
+  heads_or_tails
+  list           Shows this message
+  hi
+  ping
+  randomnumber
+  send
+  slots
+  time
+  toxic
+  help
+  withdraw
+
+Type .help command for more info on a command.```
