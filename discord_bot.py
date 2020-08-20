@@ -697,7 +697,7 @@ async def meme(ctx):
                          username="reddit_username",
                          password="reddit_password",
                          user_agent="user_agent")
-    subreddit = reddit.subreddit("dankmemes")
+    subreddit = reddit.subreddit("memes")
     all_subs = []
 
     top = subreddit.top(limit=200)
