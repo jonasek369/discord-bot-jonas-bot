@@ -1,5 +1,6 @@
 import asyncio
 import os
+import youtube_dl
 from discord.ext import commands, tasks
 from discord.utils import get
 from datetime import datetime
@@ -687,6 +688,33 @@ async def kick(ctx, member: discord.Member, *, reason = "Žádný důvod nebyl d
     await member.send(f"byl jsi kicknut z {ctx.guild.name} důvod :  {reason}")
     await member.kick(reason=reason)
 
+
+@client.command()
+async def meme(ctx):
+
+    reddit = praw.Reddit(client_id="reddit_client_id",
+                         client_secret="reddit_secret",
+                         username="reddit_username",
+                         password="reddit_password",
+                         user_agent="user_agent")
+    subreddit = reddit.subreddit("dankmemes")
+    all_subs = []
+
+    top = subreddit.top(limit=200)
+
+    for submission in top:
+        all_subs.append(submission)
+
+    random_sub = random.choice(all_subs)
+
+    name = random_sub.title
+    url = random_sub.url
+    author = random_sub.author
+
+    em = discord.Embed(title=name,color=discord.Color.orange())
+    em.set_image(url=url)
+    em.set_footer(text=f"from r/memes by u/{author}")
+    await ctx.send(embed=em)
 
 
 client.run("yourbottoken")
