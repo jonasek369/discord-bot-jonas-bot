@@ -8,6 +8,7 @@
 
 @everyone commands
   balance
+  meme
   work
   calculator
   clear
