@@ -1,5 +1,8 @@
 # discord-bot-jonas-bot
 
+19.11.20/18:21 Started working on rewrite
+
+
 jonas bot is now hosted on HORUKU
 
 
